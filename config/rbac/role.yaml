@@ -1,0 +1,85 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - webapp.dev.cloud
+  resources:
+  - corepodpermissions
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.dev.cloud
+  resources:
+  - corepodpermissions/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - webapp.dev.cloud
+  resources:
+  - corepodpermissions/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - webapp.dev.cloud
+  resources:
+  - corepods
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.dev.cloud
+  resources:
+  - corepods/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - webapp.dev.cloud
+  resources:
+  - corepods/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - webapp.dev.cloud
+  resources:
+  - testpvcs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.dev.cloud
+  resources:
+  - testpvcs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - webapp.dev.cloud
+  resources:
+  - testpvcs/status
+  verbs:
+  - get
+  - patch
+  - update

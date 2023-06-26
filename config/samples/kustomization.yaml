@@ -1,0 +1,6 @@
+## Append samples of your project ##
+resources:
+- webapp_v1_testpvc.yaml
+- webapp_v1_corepod.yaml
+- webapp_v1_corepodpermission.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

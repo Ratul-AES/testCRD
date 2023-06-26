@@ -1,0 +1,12 @@
+apiVersion: webapp.dev.cloud/v1
+kind: CorePodPermission
+metadata:
+  labels:
+    app.kubernetes.io/name: corepodpermission
+    app.kubernetes.io/instance: corepodpermission-sample
+    app.kubernetes.io/part-of: testcrd
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: testcrd
+  name: corepodpermission-sample
+spec:
+  # TODO(user): Add fields here

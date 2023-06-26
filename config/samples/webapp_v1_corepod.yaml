@@ -1,0 +1,14 @@
+apiVersion: webapp.dev.cloud/v1
+kind: CorePod
+metadata:
+  labels:
+    app.kubernetes.io/name: corepod
+    app.kubernetes.io/instance: corepod-sample
+    app.kubernetes.io/part-of: testcrd
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: testcrd
+  name: corepod-sample
+spec:
+  # TODO(user): Add fields here
+  size: 1
+  coreImg: "shahidulaes/devopspvc:0.2"

@@ -1,0 +1,14 @@
+apiVersion: webapp.dev.cloud/v1
+kind: TestPvc
+metadata:
+  labels:
+    app.kubernetes.io/name: testpvc
+    app.kubernetes.io/instance: testpvc-sample
+    app.kubernetes.io/part-of: testcrd
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: testcrd
+  name: testpvc-sample
+spec:
+  # TODO(user): Add fields here
+  size: 1
+  dbImg: "mysql:5.7"
